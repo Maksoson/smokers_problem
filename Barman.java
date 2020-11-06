@@ -29,21 +29,21 @@ public class Barman extends Thread {
             int smoker = random.nextInt(3) + 1;
             String barmanName = "\"Bob (the barman)\"";
             if (smoker == 1) {              // Курить будет первый курильщик
-                System.out.println(barmanName + " is now collecting tobacco and matches (for first smoker)...");
+                System.out.println(barmanName + " is now collecting tobacco and matches (for the first smoker)...");
                 collectionOfComponents();
                 System.out.println(barmanName + " laid out the tobacco and matches (" + collectingTime + " ms)");
 
                 // На столе табак и спички
                 tobaccoAndMatches.release();
             } else if (smoker == 2) {       // Курить будет второй курильщик
-                System.out.println(barmanName + " is now collecting paper and matches (for second smoker)...");
+                System.out.println(barmanName + " is now collecting paper and matches (for the second smoker)...");
                 collectionOfComponents();
                 System.out.println(barmanName + " laid out the paper and matches (" + collectingTime + " ms)");
 
                 // На столе бумага и спички
                 paperAndMatches.release();
             } else if (smoker == 3) {       // Курить будет третий курильщик
-                System.out.println(barmanName + " is now collecting tobacco and paper (for third smoker)...");
+                System.out.println(barmanName + " is now collecting tobacco and paper (for the third smoker)...");
                 collectionOfComponents();
                 System.out.println(barmanName + " laid out the tobacco and paper (" + collectingTime + " ms)");
 

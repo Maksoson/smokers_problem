@@ -64,14 +64,14 @@ public class Smoker extends Thread {
      * @param name
      */
     protected static synchronized void makeAndSmokeCigarette(String name) {
-        System.out.println(name + " is making new cigarette...");
+        System.out.println(name + " is making a new cigarette...");
         makeCigarette();
         System.out.println(name + " make his cigarette (" + (makeTime) + " ms)");
 
         // После скручивания сигареты, стол освобождается
         emptyTable.release();
 
-        System.out.println(name + " is smoking cigarette...");
+        System.out.println(name + " is smoking a cigarette...");
         smokeCigarette();
         System.out.println(name + " smoked his cigarette (" + (smokeTime) + " ms)");
     }
